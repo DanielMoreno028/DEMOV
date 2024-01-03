@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="horizontal"
+    tools:context=".ui.login.Activity_inicio_sesion">
+
+    <ImageView
+        android:id="@+id/imgGoogle"
+        android:layout_width="47dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toStartOf="@id/olvidasteContraseña"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/google"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/WhitGoogle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:hint="Inicio Sesiòn con Google"
+        app:layout_constraintBottom_toBottomOf="@id/imgGoogle"
+        app:layout_constraintStart_toEndOf="@+id/imgGoogle"
+        app:layout_constraintTop_toTopOf="@id/imgGoogle"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/iniciosesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Inicio Sesiòn"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/EmailOrPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/WhitGoogle"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/EmailOrPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:hint="Correo electronico o telefono   "
+        android:inputType="textEmailAddress"
+       android:padding="15sp"
+        android:background="@drawable/inputs"
+        app:layout_constraintBottom_toTopOf="@id/olvidasteContraseña"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iniciosesion"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/olvidasteContraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="¿Olvidaste tu correo electronico?"
+        app:layout_constraintBottom_toTopOf="@id/EmailOrPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="40dp"
+        android:hint="Para continuar, Google compartira tu nombre, tu direccion de correo electronico, tu referencia de idioma y tu foto de perfil con IMBd."
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/olvidasteContraseña"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="28dp"
+        android:text="Crear cuenta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView3" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Siguiente"
+        app:layout_constraintBottom_toBottomOf="@id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toTopOf="@id/button"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MovieAplication" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:textAllCaps">false</item>
+
+    </style>
+
+    <style name="Theme.MovieAplication" parent="Base.Theme.MovieAplication" />
+
+    <style name="Text.Title.RobotoBold" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">90sp</item>
+        <item name="android:textColor">@color/yellow</item>
+    </style>
+
+    <style name="Widget.Buttom" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/style_buttom</item>
+        <item name="android:textAppearance">@style/textDefauld</item>
+    </style>
+
+    <style name="Text.Title2.RobotoBold" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">50sp</item>
+        <item name="android:textColor">@color/yellow</item>
+    </style>
+</resources>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:layout_gravity="center"
+    android:orientation="horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/flecha"
+        android:layout_width="78dp"
+        android:layout_height="61dp"
+        android:onClick="Devolver"
+        android:src="@mipmap/devolver_foreground"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/Text.Title2.RobotoBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="52dp"
+        android:background="@color/yellow"
+        android:text="IMDb"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/tvCrearCuenta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/flecha"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvCrearCuenta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="18dp"
+        android:text="Crear una cuenta"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        app:layout_constraintBottom_toTopOf="@id/tvUsuario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/tvUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/inputs"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:hint="Nombre"
+        android:inputType="text"
+        android:padding="10sp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/tvEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/inputs"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:hint="Correo electronico"
+        android:inputType="textEmailAddress"
+        android:padding="10sp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/tvContraseña"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvUsuario"
+        tools:ignore="MissingConstraints" />
+
+
+    <EditText
+        android:id="@+id/tvContraseña"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/inputs"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:padding="10sp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/btEnter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEmail"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvRequisito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="La consetraña debe contener 8 caracteres"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btEnter"
+        app:layout_constraintTop_toTopOf="@id/tvContraseña"
+        android:layout_marginLeft="70dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btEnter"
+        style="@style/Widget.Buttom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:onClick="CCLogin"
+        android:text="Aceptar"
+        android:background="@drawable/style_buttom"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvContraseña"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent
+"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    android:paddingHorizontal="80dp"
+    android:layout_gravity="center"
+    android:orientation="horizontal"
+    tools:context=".MainActivity2_login">
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/Text.Title.RobotoBold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="IMDb"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/textUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,MissingConstraints"
+        />
+
+    <TextView
+        android:id="@+id/tvUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Usuario"
+        android:layout_marginBottom="10sp"
+        app:layout_constraintBottom_toTopOf="@id/textUser"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/roboto_bold"
+        tools:ignore="HardcodedText,MissingConstraints"/>
+
+
+    <EditText
+        android:id="@+id/textUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/inputs"
+        android:hint="user"
+        android:inputType="text"
+        android:padding="10sp"
+        app:layout_constraintBottom_toTopOf="@id/etPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvContra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        android:layout_marginBottom="10sp"
+        android:fontFamily="@font/roboto_bold"
+        app:layout_constraintBottom_toTopOf="@id/etPassword"
+        tools:ignore="HardcodedText,MissingConstraints"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/inputs"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="10sp"
+        app:layout_constraintBottom_toTopOf="@id/btLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textUser"
+        tools:ignore="HardcodedText,MissingConstraints"
+         />
+
+    <TextView
+        android:id="@+id/tvOlvidecontraseña"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="¿Olvidaste_tu_contraseña?"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btLogin"
+        style="@style/Widget.Buttom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="ButtonLogin"
+        android:text="Login"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        app:layout_constraintBottom_toTopOf="@id/imgApple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvOpcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="O puedes ingresar con"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/btLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/imgApple"
+        android:textColor="@color/grey"
+        tools:ignore="MissingConstraints"
+
+
+        />
+
+
+    <ImageView
+        android:id="@+id/imgApple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintTop_toBottomOf="@id/btLogin"
+        app:layout_constraintEnd_toStartOf="@id/imgFacebook"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:srcCompat="@mipmap/apple" />
+
+    <ImageView
+        android:id="@+id/imgFacebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/imgApple"
+        app:layout_constraintEnd_toStartOf="@+id/imgGoogle"
+        app:layout_constraintStart_toEndOf="@+id/imgApple"
+        app:layout_constraintTop_toTopOf="@id/imgApple"
+        app:srcCompat="@mipmap/facebook" />
+
+    <ImageView
+        android:id="@+id/imgGoogle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/imgFacebook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgFacebook"
+        app:layout_constraintTop_toTopOf="@id/imgFacebook"
+        app:srcCompat="@mipmap/google" />
+
+
+    <TextView
+        android:id="@+id/Register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Registrate"
+        android:onClick="Registro"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgApple"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="80dp" />
+
+    <TextView
+        android:id="@+id/tvInvitado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:text="Continuar como invitado"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Register"
+        tools:ignore="MissingConstraints" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
