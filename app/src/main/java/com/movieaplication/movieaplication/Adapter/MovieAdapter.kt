@@ -3,10 +3,10 @@ package com.movieaplication.movieaplication.Adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.movieaplication.movieaplication.Movies
+import com.example.recyclerviewapplication.Movie
 import com.movieaplication.movieaplication.R
 
-class MovieAdapter(val movieList: List<Movies>) : RecyclerView.Adapter<MovieViewHolder>() {
+class MovieAdapter(private val movieList: List<Movie>) : RecyclerView.Adapter<MovieViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -16,7 +16,7 @@ class MovieAdapter(val movieList: List<Movies>) : RecyclerView.Adapter<MovieView
     override fun getItemCount(): Int = movieList.size
 
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
-        val item = movieList[position]
+        val item =  movieList[position]
         holder.render(item)
     }
 

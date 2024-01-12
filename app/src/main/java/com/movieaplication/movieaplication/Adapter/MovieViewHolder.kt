@@ -1,11 +1,12 @@
 package com.movieaplication.movieaplication.Adapter
 
+import Services.ApiService.Companion.IMAGE_URL
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.movieaplication.movieaplication.Movies
+import com.example.recyclerviewapplication.Movie
 import com.movieaplication.movieaplication.R
 
 
@@ -17,10 +18,11 @@ class MovieViewHolder(view:View) : RecyclerView.ViewHolder(view) {
     val actorsName = view.findViewById<TextView>(R.id.actortv)
     val photo = view.findViewById<ImageView>(R.id.iv_img)
 
-    fun render(moviesModel: Movies) {
-        movieName.text = moviesModel.title
-        movieYear.text = moviesModel.year.toString()
-        actorsName.text = moviesModel.actors
-        Glide.with(photo.context).load(moviesModel.img).into(photo)
+    fun render(movieModel: Movie) {
+        movieName.text = movieModel.original_title
+        movieYear.text = movieModel.release_date.toString()
+        actorsName.text = movieModel.overview
+        val imageUrl = IMAGE_URL + movieModel.poster_path
+        Glide.with(photo.context).load(imageUrl).into(photo)
     }
 }
